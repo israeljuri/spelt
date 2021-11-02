@@ -1,0 +1,26 @@
+.notfound {
+  background-color: var(--color-primary);
+  min-height: 100vh;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__text {
+    text-align: center;
+  }
+  &__heading {
+    font-size: 5rem;
+  }
+  &__paragraph {
+    font-size: 3rem;
+    font-weight: normal;
+    opacity: 0.5;
+    margin-bottom: 5rem;
+  }
+  &__cta {
+    & > *:not(:first-child) {
+      margin-left: 2rem;
+    }
+  }
+}

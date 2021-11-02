@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.scss';
 import illustration from '../../../images/banner-illustrator.png';
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
   state = {};
@@ -18,14 +19,14 @@ class Home extends Component {
                 Practice spelling common and often misspelled english words.
               </h1>
               <div className="banner__cta">
-                <a
-                  href="/create-profile"
+                <Link
+                  to="/create-profile"
                   className="btn animate__animated animate__pulse animate__infinite">
                   create your profile
-                </a>
-                <a href="/select-profile" className="btn btn--alt">
+                </Link>
+                <Link to="/select-profile" className="btn btn--alt">
                   Load your profile
-                </a>
+                </Link>
               </div>
             </article>
             <figure className="banner__image animate__animated animate__bounceInUp">

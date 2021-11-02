@@ -62,13 +62,8 @@ em {
   text-transform: capitalize;
 
   &--alt {
-    border: solid 2px var(--color-secondary);
-    background-color: transparent;
-    color: Var(--color-secondary);
-    &:hover {
-      background-color: var(--color-secondary);
-      color: var(--color-white);
-    }
+    background-color: var(--color-secondary);
+    color: var(--color-white);
   }
 
   &:hover {
