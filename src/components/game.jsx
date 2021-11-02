@@ -17,16 +17,15 @@ class Game extends Component {
     return (
       <Fragment>
         <Switch>
-          <Route path="/select-profile">
-            <Select />
-          </Route>
+          <Route
+            path="/select-profile"
+            component={(props) => <Select {...props} />}
+          />
           <Route
             path="/create-profile"
             component={(props) => <Create {...props} />}
           />
-          <Route path="/notFound">
-            <NotFound />
-          </Route>
+          <Route path="/notFound" component={NotFound} />
           <Route exact path="/">
             <Home />
           </Route>

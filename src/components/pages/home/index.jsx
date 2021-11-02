@@ -12,9 +12,9 @@ class Home extends Component {
           <div className="banner__content">
             <article className="banner__text animate__animated animate__bounceInDown">
               <a href="/" className="banner__logo">
-                SPELT.
+                SPELT,
               </a>
-              <h2 className="banner__subheading">A Word dictation</h2>
+              <h2 className="banner__subheading">A Word dictation game.</h2>
               <h1 className="banner__heading">
                 Practice spelling common and often misspelled english words.
               </h1>

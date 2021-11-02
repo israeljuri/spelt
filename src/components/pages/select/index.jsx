@@ -19,6 +19,15 @@ class Select extends Component {
       const users = DB.getData();
       this.setState({ users });
     };
+
+    const handleSelect = () => {
+      this.props.history.replace('/play');
+    };
+
+    const handleCreate = () => {
+      this.props.history.replace('/create-profile');
+    };
+
     return (
       <section className="select" id="select">
         <div className="container">
@@ -29,14 +38,19 @@ class Select extends Component {
               </h1>
               <p className="select__paragraph">
                 Can't find yours?{' '}
-                <a className="select__link" href="/create-profile">
+                <button
+                  className="btn btn--small btn--alt select__link"
+                  onClick={handleCreate}>
                   Create a profile
-                </a>{' '}
+                </button>{' '}
               </p>
             </header>
             <div className="select__profiles">
               {this.state.users.map((user) => (
-                <article className="select__card" data-id={user.id}>
+                <article
+                  className="select__card"
+                  data-id={user.id}
+                  onClick={handleSelect}>
                   <h2 className="select__name">{user.name}</h2>
                   <span className="select__highscore">
                     <p className="select__description">High Score:</p>
