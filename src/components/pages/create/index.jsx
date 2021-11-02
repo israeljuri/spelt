@@ -3,6 +3,7 @@ import './style.scss';
 import { Link } from 'react-router-dom';
 import boy from '../../../images/boy-avatar.png';
 import girl from '../../../images/girl-avatar.png';
+import DB from '../../../utils/localStorage';
 
 class Create extends React.Component {
   state = {
@@ -38,8 +39,13 @@ class Create extends React.Component {
       const error = validate(this.state.name);
       if (error) return;
 
-      const data = { name: this.state.name, gender: this.state.gender };
-      console.log(data);
+      const data = {
+        id: new Date().getTime(),
+        name: this.state.name,
+        gender: this.state.gender,
+      };
+
+      DB.saveData(data);
     };
 
     return (
