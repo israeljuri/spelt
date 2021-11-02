@@ -41,11 +41,15 @@ class Create extends React.Component {
 
       const data = {
         id: new Date().getTime(),
+        highScore: 0,
+        scores: [],
         name: this.state.name,
         gender: this.state.gender,
       };
 
       DB.saveData(data);
+
+      this.props.history.replace('/select-profile');
     };
 
     return (

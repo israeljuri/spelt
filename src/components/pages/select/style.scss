@@ -1,0 +1,101 @@
+.select {
+  &__content {
+    display: grid;
+    text-align: center;
+    padding: 0 2rem;
+    grid-template-rows: 20rem 1fr;
+  }
+  &__header {
+    color: var(--color-white);
+    margin-bottom: 5rem;
+    align-self: end;
+  }
+  &__heading {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+  &__paragraph {
+    font-size: 2rem;
+  }
+  &__profiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    grid-row-gap: 15rem;
+  }
+  &__card {
+    transition: 0.2s;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 20rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    padding: 0 3rem;
+    &:hover {
+      background-color: var(--color-secondary);
+      .select {
+        &__name,
+        &__highscore {
+          color: var(--color-white);
+        }
+
+        &__avatar {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+  &__name {
+    font-size: 3.5rem;
+    font-weight: normal;
+    color: var(--color-secondary);
+  }
+  &__highscore {
+    line-height: 1;
+    color: Var(--color-primary);
+  }
+  &__description {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  &__value {
+    font-size: 3rem;
+  }
+
+  &__avatar {
+    transition: 0.2s;
+    filter: grayscale(10);
+    width: 12rem;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+  }
+  &__cta {
+    margin-top: 2rem;
+  }
+
+  @media screen and (max-width: 880px) {
+    &__profiles {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 3rem;
+    }
+    &__card {
+      overflow: hidden;
+    }
+    &__avatar {
+      top: 20%;
+    }
+  }
+  @media screen and (max-width: 680px) {
+    &__profiles {
+      grid-template-columns: 1fr;
+    }
+  }
+}
