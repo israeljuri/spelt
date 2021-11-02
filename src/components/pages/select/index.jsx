@@ -46,6 +46,9 @@ class Select extends Component {
               </p>
             </header>
             <div className="select__profiles">
+              {this.state.users.length === 0 && (
+                <h4 className="select__info">No profiles yet.</h4>
+              )}
               {this.state.users.map((user) => (
                 <article
                   className="select__card"
@@ -68,7 +71,7 @@ class Select extends Component {
                     <button
                       onClick={(event) => handleDelete(user)}
                       className="btn btn--small btn--danger">
-                      Delete
+                      Delete profile
                     </button>
                   </div>
                 </article>

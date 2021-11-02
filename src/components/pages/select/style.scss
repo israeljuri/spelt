@@ -1,5 +1,6 @@
 .select {
   &__content {
+    min-height: 100vh;
     display: grid;
     text-align: center;
     padding: 0 2rem;
@@ -23,6 +24,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3rem;
     grid-row-gap: 15rem;
+    position: relative;
   }
   &__card {
     transition: 0.2s;
@@ -54,6 +56,17 @@
   }
   &__name {
     font-size: 3.5rem;
+    font-weight: normal;
+    color: var(--color-secondary);
+  }
+  &__info {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.2;
+    font-size: 4rem;
     font-weight: normal;
     color: var(--color-secondary);
   }

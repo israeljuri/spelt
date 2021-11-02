@@ -14,7 +14,7 @@ class Home extends Component {
               <a href="/" className="banner__logo">
                 SPELT,
               </a>
-              <h2 className="banner__subheading">A Word dictation game.</h2>
+              <h2 className="banner__subheading">A word dictation game.</h2>
               <h1 className="banner__heading">
                 Practice spelling common and often misspelled english words.
               </h1>
