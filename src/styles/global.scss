@@ -15,7 +15,7 @@ html {
   }
 
   @media screen and (max-width: 650px) {
-    font-size: 47%;
+    font-size: 40%;
   }
 }
 
@@ -60,7 +60,12 @@ em {
   font-weight: bold;
   transition: 0.2s;
   text-transform: capitalize;
+  font-size: 1.8rem;
 
+  &--error {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
   &--alt {
     background-color: var(--color-secondary);
     color: var(--color-white);
