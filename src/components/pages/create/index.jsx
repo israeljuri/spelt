@@ -63,6 +63,14 @@ class Create extends React.Component {
                 <h3 className="create__heading">
                   Hi, let's get your profile ready.
                 </h3>
+                <p className="create__paragraph">
+                  Already have a profile?{' '}
+                  <Link
+                    className="btn btn--small btn--alt"
+                    to="/select-profile">
+                    Select profile
+                  </Link>
+                </p>
               </header>
               <div className="create__control">
                 <input
@@ -78,11 +86,14 @@ class Create extends React.Component {
                   placeholder={
                     this.state.error
                       ? 'Please give a name.'
-                      : "What's your nickname?"
+                      : "What's your first name?"
                   }
                 />
               </div>
               <div className="create__gender">
+                <p className="create__info">
+                  Gender: <em>{this.state.gender == 0 ? 'male' : 'female'}</em>
+                </p>
                 <span className="create__atom">
                   <input
                     onChange={handleChange}
@@ -112,16 +123,9 @@ class Create extends React.Component {
                 <button
                   className={this.state.error ? 'btn btn--error' : 'btn'}
                   type="submit">
-                  Create Profile
+                  Save profile
                 </button>
-                <Link
-                  to="/"
-                  className={
-                    this.state.error
-                      ? 'btn btn--alt btn--error'
-                      : 'btn btn--alt'
-                  }
-                  type="submit">
+                <Link to="/" className="btn btn--alt" type="submit">
                   Go home
                 </Link>
               </div>

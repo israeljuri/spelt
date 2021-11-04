@@ -25,6 +25,7 @@
     grid-gap: 3rem;
     grid-row-gap: 15rem;
     position: relative;
+    place-content: flex-start;
   }
   &__card {
     transition: 0.2s;

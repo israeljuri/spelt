@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import './style.scss';
 import boy from '../../../images/boy.png';
 import girl from '../../../images/girl.png';
 import DB from '../../../utils/localStorage';
+import { Link } from 'react-router-dom';
 
 class Select extends Component {
   state = { users: [] };
@@ -38,11 +38,9 @@ class Select extends Component {
               </h1>
               <p className="select__paragraph">
                 Can't find yours?{' '}
-                <button
-                  className="btn btn--small btn--alt select__link"
-                  onClick={handleCreate}>
+                <Link className="btn btn--small btn--alt" to="/create-profile">
                   Create a profile
-                </button>{' '}
+                </Link>{' '}
               </p>
             </header>
             <div className="select__profiles">
@@ -66,14 +64,6 @@ class Select extends Component {
                       <img src={girl} alt="" />
                     )}
                   </figure>
-
-                  <div className="select__cta">
-                    <button
-                      onClick={(event) => handleDelete(user)}
-                      className="btn btn--small btn--danger">
-                      Delete profile
-                    </button>
-                  </div>
                 </article>
               ))}
             </div>

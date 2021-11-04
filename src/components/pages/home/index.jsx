@@ -19,9 +19,7 @@ class Home extends Component {
                 Practice spelling common and often misspelled english words.
               </h1>
               <div className="banner__cta">
-                <Link
-                  to="/create-profile"
-                  className="btn animate__animated animate__pulse animate__infinite">
+                <Link to="/create-profile" className="btn">
                   create your profile
                 </Link>
                 <Link to="/select-profile" className="btn btn--alt">

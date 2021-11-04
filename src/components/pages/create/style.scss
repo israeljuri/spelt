@@ -39,8 +39,8 @@
     }
   }
   &__gender {
-    & > *:not(:first-child) {
-      margin-left: 5rem;
+    & > *:nth-child(2) {
+      margin-right: 5rem;
     }
   }
   &__atom {
@@ -67,6 +67,19 @@
       overflow: hidden;
       height: 10rem;
       width: 10rem;
+    }
+  }
+  &__info {
+    line-height: 1;
+    color: var(--color-white);
+    font-weight: normal;
+    margin-bottom: 1rem;
+    em {
+      font-weight: bold;
+      text-transform: capitalize;
+      width: 6rem;
+      display: inline-block;
+      text-align: left;
     }
   }
 }
